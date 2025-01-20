@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/moblesFragment">
+    <fragment
+        android:id="@+id/afegirFragment"
+        android:name="com.hector.examenhector.fragments.AfegirFragment"
+        android:label="AfegirFragment"
+        tools:layout="@layout/fragment_afegir">
+    </fragment>
+    <fragment
+        android:id="@+id/moblesFragment"
+        android:name="com.hector.examenhector.fragments.MoblesFragment"
+        android:label="MoblesFragment"
+        tools:layout="@layout/fragment_mobles"
+        />
+    <fragment
+        android:id="@+id/contactesFragment"
+        android:name="com.hector.examenhector.fragments.ContactesFragment"
+        android:label="ContactesFragment"
+        tools:layout="@layout/fragment_contactes"
+    />
+</navigation>

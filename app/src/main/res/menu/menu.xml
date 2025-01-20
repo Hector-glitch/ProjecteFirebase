@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/moblesFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/llista"
+        android:icon="@drawable/baseline_chair_24"
+        />
+    <item
+        android:id="@+id/contactesFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/contacta"
+        android:icon="@drawable/baseline_contact_support_24"
+        />
+
+</menu>
