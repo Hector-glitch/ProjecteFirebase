@@ -15,7 +15,8 @@
         android:id="@+id/moblesFragment"
         android:name="com.hector.examenhector.fragments.MoblesFragment"
         android:label="MoblesFragment"
-        tools:layout="@layout/fragment_mobles" />
+        tools:layout="@layout/fragment_mobles" >
+    </fragment>
     <action
         android:id="@+id/action_fragmentMobles_to_fragmentAfegir"
         app:destination="@id/afegirFragment" />

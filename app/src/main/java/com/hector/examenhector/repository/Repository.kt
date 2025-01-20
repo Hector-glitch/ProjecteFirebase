@@ -18,7 +18,7 @@ class Repository {
             return FurnitureDatabase.getDatabase(context)
         }
 
-        fun insertAlumn(context: Context, moble: Moble) {
+        fun insertFurniture(context: Context, moble: Moble) {
             furnitureDatabase = initializeDB(context)
 
             CoroutineScope(Dispatchers.IO).launch {

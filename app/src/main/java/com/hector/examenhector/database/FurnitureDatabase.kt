@@ -35,5 +35,3 @@ abstract class FurnitureDatabase: RoomDatabase() {
 
     }
 }
-
-//.createFromAsset("database/alumn_db.db")

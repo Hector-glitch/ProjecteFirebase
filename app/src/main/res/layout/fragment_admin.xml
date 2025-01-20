@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.Fragment">
+
+
+        <EditText
+            android:id="@+id/NomEditarText"
+            android:layout_width="264dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="184dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/PreuEditarText"
+            android:layout_width="264dp"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Preu"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/EsborrarBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PreuEditarText"
+            app:layout_constraintVertical_bias="0.82"
+            tools:ignore="NotSibling" />
+
+        <Button
+            android:id="@+id/EsborrarBtn"
+            android:layout_width="122dp"
+            android:layout_height="73dp"
+            android:layout_marginBottom="304dp"
+            android:text="+"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

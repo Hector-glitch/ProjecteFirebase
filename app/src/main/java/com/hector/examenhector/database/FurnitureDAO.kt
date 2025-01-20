@@ -13,4 +13,7 @@ interface FurnitureDAO {
 
     @Query("SELECT * FROM Furniture")
     fun initialFurnitureQuery(): LiveData<List<Moble>>?
+
+    @Query("UPDATE furniture SET price = :price WHERE name = :name")
+    fun updateFurniture(price: Int, name: String)
 }

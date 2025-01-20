@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hector.examenhector.R
 import com.hector.examenhector.adapter.MobleAdapter
 import com.hector.examenhector.databinding.FragmentMoblesBinding
 import com.hector.examenhector.viewModel.RecyclerFurnitureViewModel
+
 class MoblesFragment : Fragment() {
     private lateinit var binding: FragmentMoblesBinding
     private val viewModel: RecyclerFurnitureViewModel by viewModels()
@@ -26,6 +28,10 @@ class MoblesFragment : Fragment() {
         val alumnRecyclerView = binding.recyclerView
         alumnRecyclerView.layoutManager = LinearLayoutManager(context)
         alumnRecyclerView.setHasFixedSize(true)
+
+        binding.AfegirBtn?.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentMobles_to_fragmentAfegir, null)
+        }
 
         var moblesAdapter = MobleAdapter(requireContext(), emptyList()) { selectedItem ->
             Toast.makeText(

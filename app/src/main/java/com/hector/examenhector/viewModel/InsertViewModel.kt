@@ -8,6 +8,7 @@ import com.hector.examenhector.repository.Repository
 class InsertViewModel: ViewModel() {
 
     fun insertMobles(context: Context, moble: Moble) {
-        Repository.insertAlumn(context, moble)
+        Repository.insertFurniture(context, moble)
     }
+
 }
