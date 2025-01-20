@@ -30,7 +30,7 @@ abstract class FurnitureDatabase: RoomDatabase() {
                 FurnitureDatabase::class.java,
                 "alumn_db"
             )
-                .build()
+                .createFromAsset("database/furniture.db").build()
         }
 
     }

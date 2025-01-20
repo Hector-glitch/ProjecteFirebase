@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.AfegirFragment">
+        tools:context=".fragment.Fragment">
 
 
         <EditText
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/NotaEditarText"
+            android:id="@+id/PreuEditarText"
             android:layout_width="264dp"
             android:layout_height="48dp"
             android:autofillHints=""
@@ -35,8 +35,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NomEditarText"
-            app:layout_constraintVertical_bias="0.82" />
+            app:layout_constraintTop_toBottomOf="@+id/PreuEditarText"
+            app:layout_constraintVertical_bias="0.82"
+            tools:ignore="NotSibling" />
 
         <Button
             android:id="@+id/AfegirBtn"

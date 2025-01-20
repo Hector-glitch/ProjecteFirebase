@@ -22,14 +22,14 @@ class Repository {
             furnitureDatabase = initializeDB(context)
 
             CoroutineScope(Dispatchers.IO).launch {
-                furnitureDatabase!!.furnitureDAO().insertAlumn(mobles)
+                furnitureDatabase!!.furnitureDAO().insertFurniture(moble)
             }
         }
 
-        fun getAllAlumns(context: Context): LiveData<List<Moble>>? {
+        fun getAllFurniture(context: Context): LiveData<List<Moble>>? {
             furnitureDatabase = initializeDB(context)
 
-            mobles = furnitureDatabase!!.furnitureDAO().initialAlumnsQuery()
+            mobles = furnitureDatabase!!.furnitureDAO().initialFurnitureQuery()
             return mobles
         }
 
