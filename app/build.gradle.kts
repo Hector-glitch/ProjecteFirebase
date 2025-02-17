@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.devtools.ksp") version "1.9.22-1.0.16"
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.hector.examenhector"
+    namespace = "com.hector.projectefirebase"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.hector.examenhector"
+        applicationId = "com.hector.projectefirebase"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -54,6 +55,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Firebase i Autentificacio
+    implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth:23.2.0")
 
     //Navivagition
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")

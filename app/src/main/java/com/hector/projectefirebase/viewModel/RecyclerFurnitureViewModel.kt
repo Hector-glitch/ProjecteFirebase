@@ -1,10 +1,10 @@
-package com.hector.examenhector.viewModel
+package com.hector.projectefirebase.viewModel
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.hector.examenhector.model.Moble
-import com.hector.examenhector.repository.Repository
+import com.hector.projectefirebase.model.Moble
+import com.hector.projectefirebase.repository.Repository
 
 class RecyclerFurnitureViewModel: ViewModel() {
 

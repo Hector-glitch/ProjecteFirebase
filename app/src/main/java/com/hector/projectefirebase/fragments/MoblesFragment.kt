@@ -1,4 +1,4 @@
-package com.hector.examenhector.fragments
+package com.hector.projectefirebase.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,10 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hector.examenhector.R
-import com.hector.examenhector.adapter.MobleAdapter
-import com.hector.examenhector.databinding.FragmentMoblesBinding
-import com.hector.examenhector.viewModel.RecyclerFurnitureViewModel
+import com.hector.projectefirebase.R
+import com.hector.projectefirebase.adapter.MobleAdapter
+import com.hector.projectefirebase.databinding.FragmentMoblesBinding
+import com.hector.projectefirebase.viewModel.RecyclerFurnitureViewModel
 
 class MoblesFragment : Fragment() {
     private lateinit var binding: FragmentMoblesBinding

@@ -1,12 +1,11 @@
-package com.hector.examenhector.fragments
+package com.hector.projectefirebase.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.hector.examenhector.R
-import com.hector.examenhector.databinding.FragmentContactesBinding
+import com.hector.projectefirebase.databinding.FragmentContactesBinding
 
 class ContactesFragment : Fragment() {
 

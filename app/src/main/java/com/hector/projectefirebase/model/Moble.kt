@@ -1,4 +1,4 @@
-package com.hector.examenhector.model
+package com.hector.projectefirebase.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

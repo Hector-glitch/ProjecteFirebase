@@ -1,11 +1,11 @@
-package com.hector.examenhector
+package com.hector.projectefirebase
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import com.hector.examenhector.databinding.ActivityMainBinding
+import com.hector.projectefirebase.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

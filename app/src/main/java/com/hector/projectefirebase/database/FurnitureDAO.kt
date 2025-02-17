@@ -1,10 +1,10 @@
-package com.hector.examenhector.database
+package com.hector.projectefirebase.database
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.hector.examenhector.model.Moble
+import com.hector.projectefirebase.model.Moble
 
 @Dao
 interface FurnitureDAO {

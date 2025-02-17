@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "557460102736",
+    "project_id": "projectefirebase-41b2d",
+    "storage_bucket": "projectefirebase-41b2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557460102736:android:df569eb1c2df099bdebb55",
+        "android_client_info": {
+          "package_name": "com.hector.projectefirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIULw2tUzbabSNxjTvHpCYTTwWfkkmKSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

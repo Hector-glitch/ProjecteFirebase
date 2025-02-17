@@ -1,11 +1,11 @@
-package com.hector.examenhector.adapter
+package com.hector.projectefirebase.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.hector.examenhector.databinding.ItemMobleBinding
-import com.hector.examenhector.model.Moble
+import com.hector.projectefirebase.model.Moble
+import com.hector.projectefirebase.databinding.ItemMobleBinding
 
 class MobleAdapter (val context: Context, var dataset: List<Moble>, val itemOnClickListener: (Moble) -> Unit)
 : RecyclerView.Adapter<MobleAdapter.MobleViewHolder>() {

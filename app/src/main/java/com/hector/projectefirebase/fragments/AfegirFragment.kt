@@ -1,4 +1,4 @@
-package com.hector.examenhector.fragments
+package com.hector.projectefirebase.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.hector.examenhector.R
-import com.hector.examenhector.databinding.FragmentAfegirBinding
-import com.hector.examenhector.model.Moble
-import com.hector.examenhector.viewModel.InsertViewModel
+import com.hector.projectefirebase.model.Moble
+import com.hector.projectefirebase.viewModel.InsertViewModel
+import com.hector.projectefirebase.databinding.FragmentAfegirBinding
 
 class AfegirFragment : Fragment() {
     private lateinit var binding: FragmentAfegirBinding

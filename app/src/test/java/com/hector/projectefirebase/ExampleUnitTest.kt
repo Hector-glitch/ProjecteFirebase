@@ -1,4 +1,4 @@
-package com.hector.examenhector
+package com.hector.projectefirebase
 
 import org.junit.Test
 

@@ -1,10 +1,9 @@
-package com.hector.examenhector.repository
+package com.hector.projectefirebase.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import com.hector.examenhector.database.FurnitureDAO
-import com.hector.examenhector.database.FurnitureDatabase
-import com.hector.examenhector.model.Moble
+import com.hector.projectefirebase.database.FurnitureDatabase
+import com.hector.projectefirebase.model.Moble
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
