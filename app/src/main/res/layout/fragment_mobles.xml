@@ -11,9 +11,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="415dp"
-            android:layout_height="364dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="386dp"
+            android:layout_height="355dp"
+            android:layout_marginTop="44dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -22,15 +22,14 @@
             android:id="@+id/AfegirBtn"
             android:layout_width="122dp"
             android:layout_height="73dp"
-            android:layout_marginBottom="232dp"
             android:text="+"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.785"
+            app:layout_constraintHorizontal_bias="0.799"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.201" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

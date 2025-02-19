@@ -1,62 +1,81 @@
 package com.hector.projectefirebase.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.hector.projectefirebase.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-    private lateinit var binding: FragmentLoginBinding
+
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflamos el layout usando Data Binding
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
-        binding.loginFragment = this  // Asociamos el Fragment con el XML
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    // Método para registrar usuario usando Firebase Authentication
-    fun registerUser() {
-        val email = binding.emailEditText.text.toString()
-        val password = binding.passwordEditText.text.toString()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        if (email.isNotEmpty() && password.isNotEmpty()) {
-            FirebaseAuth.getInstance()
-                .createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        showSuccess()
-                    } else {
-                        showAlert()
+        // Firebase Analytics
+        val analytics = FirebaseAnalytics.getInstance(requireContext())
+        val bundle = Bundle()
+        bundle.putString("message", "Integració de Firebase completa")
+        analytics.logEvent("InitScreen", bundle)
+
+        // Setup registre
+        setup()
+    }
+
+    private fun setup() {
+        binding.signUpButton.setOnClickListener {
+            val email = binding.emailEditText.text.toString()
+            val password = binding.passwordEditText.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                FirebaseAuth.getInstance()
+                    .createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            showCorrect()
+                        } else {
+                            showAlert()
+                        }
                     }
-                }
-        } else {
-            showAlert()
+            }
         }
     }
 
     private fun showAlert() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error al autenticar al usuario")
-        builder.setPositiveButton("Aceptar", null)
+        builder.setMessage("S'ha produït un error autenticant l'usuari")
+        builder.setPositiveButton("Acceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun showSuccess() {
+    private fun showCorrect() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Éxito")
-        builder.setMessage("Usuario registrado correctamente")
-        builder.setPositiveButton("Aceptar", null)
+        builder.setTitle("Registrat")
+        builder.setMessage("S'ha registrar l'usuari correctament")
+        builder.setPositiveButton("Acceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
+
