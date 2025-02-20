@@ -5,4 +5,6 @@
     <string name="afegir">afegir</string>
     <string name="llista">llista</string>
     <string name="contacta">contacta</string>
+    <string name="login">Login</string>
+    <string name="tornar">Tornar</string>
 </resources>

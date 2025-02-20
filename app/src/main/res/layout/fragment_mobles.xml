@@ -19,7 +19,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/AfegirBtn"
+            android:id="@+id/BtnAfegir"
             android:layout_width="122dp"
             android:layout_height="73dp"
             android:text="+"

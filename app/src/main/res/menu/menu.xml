@@ -11,8 +11,8 @@
         android:id="@+id/loginFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="@string/contacta"
-        android:icon="@drawable/baseline_contact_support_24"
+        android:title="@string/login"
+        android:icon="@drawable/baseline_person_24"
         />
 
 </menu>

@@ -7,6 +7,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.hector.projectefirebase.databinding.ActivityMainBinding
 
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController

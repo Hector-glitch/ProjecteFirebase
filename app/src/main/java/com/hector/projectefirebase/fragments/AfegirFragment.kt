@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.hector.projectefirebase.R
 import com.hector.projectefirebase.model.Moble
 import com.hector.projectefirebase.viewModel.InsertViewModel
 import com.hector.projectefirebase.databinding.FragmentAfegirBinding
@@ -21,21 +23,16 @@ class AfegirFragment : Fragment() {
 
         binding = FragmentAfegirBinding.inflate(inflater)
 
-        binding.AfegirBtn.setOnClickListener {
+        binding.BtnAfegir.setOnClickListener {
             val name = binding.NomEditarText.text.toString()
             val price = binding.PreuEditarText.text.toString().toInt()
 
             viewModel.insertMobles(requireContext(), Moble(null, name, price))
         }
-//        val spinner = binding.dropdownMenu
-//        ArrayAdapter.createFromResource(
-//            requireContext(),
-//            R.array.dropdownValues,
-//            android.R.layout.simple_spinner_item
-//        ).also { adapter ->
-//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//            spinner.adapter = adapter
-//        }
+
+        binding.BtnReturn.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentAfegir_to_fragmentMobles, null)
+        }
 
         return binding.root
     }

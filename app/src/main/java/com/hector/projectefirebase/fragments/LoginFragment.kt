@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
+import com.hector.projectefirebase.R
 import com.hector.projectefirebase.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -47,12 +49,33 @@ class LoginFragment : Fragment() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             showCorrect()
+                            val user = task.result?.user // Aquí obtenim l'usuari autenticat
+                            showInfoUser(user?.email ?: "", ProviderType.BASIC)
                         } else {
                             showAlert()
                         }
                     }
             }
         }
+
+        binding.loginButton.setOnClickListener {
+            val email = binding.emailEditText.text.toString()
+            val password = binding.passwordEditText.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val user = task.result?.user
+                            showInfoUser(user?.email ?: "", ProviderType.BASIC)
+                        } else {
+                            showAlert()
+                        }
+                    }
+            }
+        }
+
     }
 
     private fun showAlert() {
@@ -72,6 +95,16 @@ class LoginFragment : Fragment() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+
+    private fun showInfoUser(email: String, provider: ProviderType) {
+        val bundle = Bundle().apply {
+            putString("email", email)
+            putString("provider", provider.name)
+        }
+        findNavController().navigate(R.id.action_fragmentLogin_to_fragmentInfouser, bundle)
+    }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

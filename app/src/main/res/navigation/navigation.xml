@@ -11,6 +11,9 @@
         android:label="AfegirFragment"
         tools:layout="@layout/fragment_afegir">
     </fragment>
+    <action
+        android:id="@+id/action_fragmentAfegir_to_fragmentMobles"
+        app:destination="@id/moblesFragment" />
     <fragment
         android:id="@+id/moblesFragment"
         android:name="com.hector.projectefirebase.fragments.MoblesFragment"
@@ -21,14 +24,15 @@
         android:id="@+id/action_fragmentMobles_to_fragmentAfegir"
         app:destination="@id/afegirFragment" />
     <fragment
-        android:id="@+id/contactesFragment"
-        android:name="com.hector.projectefirebase.fragments.ContactesFragment"
-        android:label="ContactesFragment"
-        tools:layout="@layout/fragment_contactes"
-    />
-    <fragment
         android:id="@+id/loginFragment"
         android:name="com.hector.projectefirebase.fragments.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login"/>
+    <action
+        android:id="@+id/action_fragmentLogin_to_fragmentInfouser"
+        app:destination="@id/infoUserFragment" />
+    <fragment
+        android:id="@+id/infoUserFragment"
+        android:name="com.hector.projectefirebase.fragments.InfoUserFragment"
+        android:label="InfoUserFragment" />
 </navigation>

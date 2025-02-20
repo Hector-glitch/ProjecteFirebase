@@ -13,7 +13,7 @@
             android:id="@+id/NomEditarText"
             android:layout_width="264dp"
             android:layout_height="48dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="188dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="Nom"
@@ -31,16 +31,16 @@
             android:ems="10"
             android:hint="Preu"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/AfegirBtn"
+            app:layout_constraintBottom_toTopOf="@+id/BtnAfegir"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PreuEditarText"
-            app:layout_constraintVertical_bias="0.82"
+            app:layout_constraintTop_toBottomOf="@+id/NomEditarText"
+            app:layout_constraintVertical_bias="0.297"
             tools:ignore="NotSibling" />
 
         <Button
-            android:id="@+id/AfegirBtn"
+            android:id="@+id/BtnAfegir"
             android:layout_width="122dp"
             android:layout_height="73dp"
             android:layout_marginBottom="304dp"
@@ -50,6 +50,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/BtnReturn"
+            android:layout_width="118dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/tornar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BtnAfegir" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

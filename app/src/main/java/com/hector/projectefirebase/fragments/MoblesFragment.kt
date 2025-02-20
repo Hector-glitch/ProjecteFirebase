@@ -29,7 +29,7 @@ class MoblesFragment : Fragment() {
         alumnRecyclerView.layoutManager = LinearLayoutManager(context)
         alumnRecyclerView.setHasFixedSize(true)
 
-        binding.AfegirBtn?.setOnClickListener {
+        binding.BtnAfegir?.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentMobles_to_fragmentAfegir, null)
         }
 
