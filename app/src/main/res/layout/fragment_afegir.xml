@@ -13,7 +13,7 @@
             android:id="@+id/NomEditarText"
             android:layout_width="264dp"
             android:layout_height="48dp"
-            android:layout_marginTop="188dp"
+            android:layout_marginTop="128dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="Nom"
@@ -36,16 +36,16 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/NomEditarText"
-            app:layout_constraintVertical_bias="0.297"
+            app:layout_constraintVertical_bias="0.169"
             tools:ignore="NotSibling" />
 
         <Button
             android:id="@+id/BtnAfegir"
             android:layout_width="122dp"
             android:layout_height="73dp"
-            android:layout_marginBottom="304dp"
-            android:text="+"
-            android:textSize="20sp"
+            android:layout_marginBottom="328dp"
+            android:text="Afegir"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -57,9 +57,23 @@
             android:layout_height="69dp"
             android:layout_marginTop="24dp"
             android:text="@string/tornar"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BtnAfegir" />
+
+        <EditText
+            android:id="@+id/SotckEditarText"
+            android:layout_width="264dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Stock"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PreuEditarText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

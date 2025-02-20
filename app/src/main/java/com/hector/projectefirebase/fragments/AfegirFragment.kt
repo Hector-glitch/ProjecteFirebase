@@ -7,14 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.firestore.FirebaseFirestore
 import com.hector.projectefirebase.R
 import com.hector.projectefirebase.model.Moble
-import com.hector.projectefirebase.viewModel.InsertViewModel
 import com.hector.projectefirebase.databinding.FragmentAfegirBinding
 
 class AfegirFragment : Fragment() {
+
+    private val db = FirebaseFirestore.getInstance()
     private lateinit var binding: FragmentAfegirBinding
-    private val viewModel: InsertViewModel by viewModels()
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,9 +28,16 @@ class AfegirFragment : Fragment() {
 
         binding.BtnAfegir.setOnClickListener {
             val name = binding.NomEditarText.text.toString()
+            val stock = binding.SotckEditarText.text.toString().toInt()
             val price = binding.PreuEditarText.text.toString().toInt()
 
-            viewModel.insertMobles(requireContext(), Moble(null, name, price))
+            val moble = hashMapOf(
+                "nom" to name,
+                "stock" to stock,
+                "preu" to price
+            )
+
+            db.collection("mobles").document(name).set(moble)
         }
 
         binding.BtnReturn.setOnClickListener {
@@ -37,3 +47,4 @@ class AfegirFragment : Fragment() {
         return binding.root
     }
 }
+
